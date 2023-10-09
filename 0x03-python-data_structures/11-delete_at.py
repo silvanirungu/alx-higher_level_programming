@@ -3,4 +3,6 @@ def delete_at(my_list=[], idx=0):
     if idx < 0 or idx > len(my_list):
         return my_list
     else:
-        newlist = my_list.translate({[idx]: None})
+        x = my_list[idx]
+        newlist = my_list.remove(x)
+        return newlist
