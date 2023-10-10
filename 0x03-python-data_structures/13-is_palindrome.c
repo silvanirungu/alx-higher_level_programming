@@ -1,12 +1,25 @@
 #include "lists.h"
+#include <ctype.h>
 int is_palindrome(listint_t **head)
 {
-	if ((*head)->next == NULL)
+	listint_t *cur = *head;
+	int count = 0;
+
+	while (cur != NULL)
 	{
-		return (0);
+		count += cur->n;
+		/*if (isdigit(cur->n))
+		{
+			count++;
+		}*/
+		cur = cur->next;
+	}
+	if (count == 0)
+	{
+		return (1);
 	}
 	else
 	{
-		return (1);
+		return (0);
 	}
 }
