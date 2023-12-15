@@ -1,2 +1,3 @@
 -- show descrption of a table
-SHOW CREATE TABLE hbtn_0c_0;
+use hbtn_0c_0;
+SHOW CREATE TABLE first_table;
