@@ -1,6 +1,6 @@
--- count no. of similar scores
-SELECT score, COUNT(*) AS 'number'
+-- select score
+SELECT score, COUNT(score) as number
+-- select table
 FROM second_table
-GROUP BY score
-ORDER BY COUNT DESC
-HAVING COUNT(*) > 1;
+-- count the scores
+GROUP BY score;
