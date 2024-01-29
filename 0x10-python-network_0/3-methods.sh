@@ -1,3 +1,3 @@
 #!/bin/bash
 # show methods
-curl -s --request METHODS $1
+curl -sI "$1" | grep "Allow" | cut -d " " -f 2-
