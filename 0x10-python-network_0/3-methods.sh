@@ -1,3 +1,3 @@
 #!/bin/bash
 # show methods
-curl -s --request GET $1
+curl -s --request METHODS $1
