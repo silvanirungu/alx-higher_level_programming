@@ -3,10 +3,7 @@
 get the request id
 """
 
-
-import sys
-import urllib.request
-
+import sys, urllib.request
 url = urllib.request.Request(sys.argv[1])
 with urllib.request.urlopen(url) as response:
     body = response.read()
