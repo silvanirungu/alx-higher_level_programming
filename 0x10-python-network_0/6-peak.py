@@ -1,8 +1,14 @@
 #!/usr/bin/python3
-""" finds a peak in a list of unsorted integers """
+""" finds a peak in a list of unsorted integers
+"""
 
 
 def find_peak(list_of_integers):
+    """
+    Args:
+        list_of_integers(int): list of integers to find peak of
+    Returns: peak of list_of_integers or None
+    """
     list = list_of_integers
     peak = None
     x = len(list)
