@@ -14,9 +14,10 @@ if __name__ == "__main__":
             'q' : ''
         }
     response = requests.post('http://0.0.0.0:5000/search_user', data=data)
-    if (response.headers['Content-Type'] is not 'application/json'):
+    if ('application/json' not in response.headers['Content-Type']):
         print('Not a valid JSON')
     elif (response.text is None):
         print('No result')
     else:
-        print('[{}] {}'.format(response.text['id'],response.text['name']))
+        body = response.json()
+        print('[{}] {}'.format(body['id'], body['name']))
