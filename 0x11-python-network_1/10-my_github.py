@@ -6,5 +6,8 @@ import requests
 
 if __name__ == "__main__":
     response = requests.get('https://api.github.com/user', auth=(sys.argv[1], sys.argv[2]))
-    body = response.json()
-    print(body['id'])
+    try:
+        body = response.json()
+        print(body['id'])
+    except KeyError:
+        print('None')
