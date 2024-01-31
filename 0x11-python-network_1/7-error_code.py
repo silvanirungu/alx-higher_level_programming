@@ -2,7 +2,7 @@
 """ handle errors"""
 
 import sys
-from requests import exceptions, HTTPError
+import requests
 
 if __name__ == "__main__":
     response = requests.get(sys.argv[1])
