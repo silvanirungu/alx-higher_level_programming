@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+<<<<<<< HEAD
+=======
+
+>>>>>>> f87d9a95787dde15a905f7ffe759820dd508082a
 """Define a class Square."""
 
 
@@ -7,6 +11,10 @@ class Square:
 
     def __init__(self, size=0, position=(0, 0)):
         """Initialize a new square.
+<<<<<<< HEAD
+=======
+
+>>>>>>> f87d9a95787dde15a905f7ffe759820dd508082a
         Args:
             size (int): The size of the new square.
             position (int, int): The position of the new square.

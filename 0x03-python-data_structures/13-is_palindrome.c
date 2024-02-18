@@ -1,4 +1,5 @@
 #include "lists.h"
+<<<<<<< HEAD
 
 /**
  * reverse_listint - reverses a linked list
@@ -69,4 +70,29 @@ int is_palindrome(listint_t **head)
 		return (1);
 
 	return (0);
+=======
+#include <ctype.h>
+int is_palindrome(listint_t **head)
+{
+	listint_t *cur = *head;
+	int count = 0;
+
+	while (cur != NULL)
+	{
+		count += cur->n;
+		/*if (isdigit(cur->n))
+		{
+			count++;
+		}*/
+		cur = cur->next;
+	}
+	if (count == 0)
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
+>>>>>>> f87d9a95787dde15a905f7ffe759820dd508082a
 }

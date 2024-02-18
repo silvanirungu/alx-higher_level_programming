@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+<<<<<<< HEAD
 """
 101-add_attribute module
 """
@@ -19,3 +20,21 @@ def add_attribute(an_obj, an_attr, a_value):
         raise TypeError("can't add new attribute")
 
     setattr(an_obj, an_attr, a_value)
+=======
+"""Defines a function that adds attributes to objects."""
+
+
+def add_attribute(obj, att, value):
+    """Add a new attribute to an object if possible.
+
+    Args:
+        obj (any): The object to add an attribute to.
+        att (str): The name of the attribute to add to obj.
+        value (any): The value of att.
+    Raises:
+        TypeError: If the attribute cannot be added.
+    """
+    if not hasattr(obj, "__dict__"):
+        raise TypeError("can't add new attribute")
+    setattr(obj, att, value)
+>>>>>>> f87d9a95787dde15a905f7ffe759820dd508082a
