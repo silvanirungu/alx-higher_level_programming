@@ -1,0 +1,2 @@
+git add .
+git commit -m 'py lists' && git push
