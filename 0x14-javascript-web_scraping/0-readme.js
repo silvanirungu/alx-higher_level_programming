@@ -1,16 +1,16 @@
 #!/usr/bin/node
-let args = process.argv.slice(2);
-if (args[0] === undefined) {
-  console.log('No argument');
-} else if (args.length !== 1) {
-  process.exit();
-}
 
-let fs = require('fs');
-fs.readFile(args[0], 'utf8', function read (err, data) {
-  if (err) {
-    console.log(err);
-  } else {
-    console.log(data);
+// import the module
+const fs = require('fs');
+
+// The first argument is the file path
+const file = process.argv[2];
+
+// read the file
+fs.readFile(file, 'utf-8', (error, data) => {
+  if (error) {
+    console.error('Error reading file:', error);
+    return;
   }
+  console.log(data);
 });
